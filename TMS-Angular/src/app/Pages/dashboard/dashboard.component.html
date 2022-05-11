@@ -1,0 +1,403 @@
+<div class="content">
+
+    <app-sidebar></app-sidebar>
+
+
+    <div class="Bread pt-1 px-1">
+        <!-- Breadcrums Start -->
+        <div style="margin:20px;">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a [routerLink]="['../Home']">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active">Dashboard </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <section>
+        <h2 class="pt-4 px-4">Dashboard</h2>
+    </section>
+
+    <!-- Head Dashboard -->
+    <div *ngIf="role=='Head'">
+        <div class="container-fluid pt-2 px-2">
+            <div class="row g-1">
+                <div class="col-sm-8 col-xl-12">
+                    <a [routerLink]="['../']" class="nav-item nav-link ">
+                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                            <img src="./assets/img/1.jpeg" alt="Profile" id="profile">
+                            <div class="ms-3">
+                                <div>
+                                    <h6 class="mb-3">Welcome, Robert</h6>
+                                    <h6 class="mb-0">Role:Training Head</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid px-2">
+            <div class="row g-3 my-2">
+                <div class="col-md-6">
+                    <a [routerLink]="['../Userlist']" class="nav-item nav-link active">
+                        <div class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div class="col-2">
+                                <i class="fa fa-user fs-3 text-dark" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-2 ">
+                                <h4 class="mb-0 text-dark">Co-Ordinator</h4>
+                            </div>
+                            <div class="col-2">
+                                <h3 class="mb-0 mx-3">{{userdata.coordinatorCount}}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6">
+                    <a [routerLink]="['../Departmentlist']" class="nav-item nav-link active">
+                        <div class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div class="col-2">
+                                <i class="fa fa-book text-dark fs-3" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-2 ">
+                                <h4 class="mb-0 text-dark">Department</h4>
+                            </div>
+                            <div class="col-2">
+                                <h3 class="mb-0 mx-3">{{deptdata.departmentCount}}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row g-3 my-2">
+                <div class="col-md-6">
+                    <a [routerLink]="['../Userlist']" class="nav-item nav-link active">
+                        <div class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div class="col-2">
+                                <i class="fa fa-male text-dark fs-3" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-2 ">
+                                <h4 class="mb-0 text-dark">Trainer</h4>
+                            </div>
+                            <div class="col-2">
+                                <h3 class="mb-0 mx-4">{{userdata.trainerCount}}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6">
+                    <a [routerLink]="['../Userlist']" class="nav-item nav-link active">
+                        <div class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div class="col-2">
+                                <i class="fa fa-users text-dark fs-3" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-2 ">
+                                <h4 class="mb-0 text-dark">Trainee</h4>
+                            </div>
+                            <div class="col-2">
+                                <h3 class="mb-0 mx-4">{{userdata.traineeCount}}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row g-3 my-2">
+                <div class="col-md-6">
+                    <a [routerLink]="['../Userlist']" class="nav-item nav-link active">
+                        <div class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div class="col-2">
+                                <i class="fa fa-user-md text-dark fs-3" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-2 ">
+                                <h4 class="mb-0 text-dark">Reviewer</h4>
+                            </div>
+                            <div class="col-2">
+                                <h3 class="mb-0 mx-4">{{userdata.reviewerCount}}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Co-Ordinator Dashboard -->
+    <div *ngIf="role=='Co-Ordinator'">
+        <div class="container-fluid pt-2 px-2">
+            <div class="row g-1">
+                <div class="col-sm-8 col-xl-12">
+                    <a href="co-profileview.html" class="nav-item nav-link ">
+                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                            <img src="./assets/img/1.jpeg" alt="Profile" id="profile">
+                            <div class="ms-3">
+                                <div>
+                                    <h6 class="mb-3">Welcome, Robert</h6>
+                                    <h6 class="mb-0">Role:Training Co-Ordinator</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid px-2">
+            <div class="row g-3 my-2">
+                <div class="col-md-6">
+                    <a [routerLink]="['../Departmentlist']" class="nav-item nav-link active">
+                        <div class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div class="col-2">
+                                <i class="fa fa-user fs-3 text-dark" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-2 ">
+                                <h4 class="mb-0 text-dark">Department</h4>
+                            </div>
+                            <div class="col-2">
+                                <h3 class="mb-0 mx-3">{{deptdata.departmentCount}}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6">
+                    <a [routerLink]="['../courselist']" class="nav-item nav-link active">
+                        <div class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div class="col-2">
+                                <i class="fa fa-book text-dark fs-3" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-2 ">
+                                <h4 class="mb-0 text-dark">Courses</h4>
+                            </div>
+                            <div class="col-2">
+                                <h3 class="mb-0 mx-3">{{coursedata.courseCount}}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row g-3 my-2">
+                <div class="col-md-6">
+                    <a [routerLink]="['../Userlist']" class="nav-item nav-link active">
+                        <div class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div class="col-2">
+                                <i class="fa fa-male text-dark fs-3" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-2 ">
+                                <h4 class="mb-0 text-dark">Trainer</h4>
+                            </div>
+                            <div class="col-2">
+                                <h3 class="mb-0 mx-4">{{userdata.trainerCount}}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6">
+                    <a [routerLink]="['../Userlist']" class="nav-item nav-link active">
+                        <div class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div class="col-2">
+                                <i class="fa fa-users text-dark fs-3" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-2 ">
+                                <h4 class="mb-0 text-dark">Trainee</h4>
+                            </div>
+                            <div class="col-2">
+                                <h3 class="mb-0 mx-4">{{userdata.traineeCount}}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row g-3 my-2">
+                <div class="col-md-6">
+                    <a [routerLink]="['../Userlist']" class="nav-item nav-link active">
+                        <div class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div class="col-2">
+                                <i class="fa fa-user-md text-dark fs-3" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-2 ">
+                                <h4 class="mb-0 text-dark">Reviewer</h4>
+                            </div>
+                            <div class="col-2">
+                                <h3 class="mb-0 mx-4">{{userdata.reviewerCount}}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trainee Dashboard -->
+    <div *ngIf="role=='Trainee'">
+        <div class="container-fluid pt-2 px-2">
+            <div class="row g-1">
+                <div class="col-sm-8 col-xl-12">
+                    <a href="Profileview.html" class="nav-item nav-link ">
+                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+
+                            <img src="./assets/img/1.jpeg" alt="Profile" id="profile">
+                            <div class="ms-3">
+                                <div>
+                                    <h6 class="mb-3">Welcome, Robert</h6>
+                                    <h6 class="mb-0">Role:Training Trainee</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid px-2">
+            <div class="row g-3 my-2">
+                <div class="col-md-6">
+                    <a href="head-coordinator.html" class="nav-item nav-link active">
+                        <div class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div class="col-2">
+                                <i class="fa-solid fa-square-pen fs-3 text-dark" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-2 ">
+                                <h4 class="mb-0 text-dark">Courses</h4>
+                            </div>
+                            <div class="col-2">
+                                <h3 class="mb-0 mx-3">{{coursedata.courseCount}}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6">
+                    <a href="head-coordinator.html" class="nav-item nav-link active">
+                        <div class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div class="col-2">
+                                <i class="fa fa-book text-dark fs-3" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-2 ">
+                                <h4 class="mb-0 text-dark">Assigned Review</h4>
+                            </div>
+                            <div class="col-2">
+                                <h3 class="mb-0 mx-3">5</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row g-3 my-2">
+                <div class="col-md-6">
+                    <a href="head-coordinator.html" class="nav-item nav-link active">
+                        <div class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div class="col-2">
+                                <i class="fa fa-male text-dark mx-2 fs-3" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-2 ">
+                                <h4 class="mb-0 text-dark">Completed Review</h4>
+                            </div>
+                            <div class="col-2">
+                                <h3 class="mb-0 mx-3">{{reviewdata.completedReviewCount}}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6">
+                    <a href="head-coordinator.html" class="nav-item nav-link active">
+                        <div class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div class="col-2">
+                                <i class="fa fa-users text-dark fs-3" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-2 ">
+                                <h4 class="mb-0 text-dark">Canceled Review</h4>
+                            </div>
+                            <div class="col-2">
+                                <h3 class="mb-0 mx-4">{{reviewdata.cancelledReviewCount}}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reviewer Dashboard -->
+    <div *ngIf="role=='Reviewer'">
+        <div class="container-fluid pt-2 px-2">
+            <div class="row g-1">
+                <div class="col-sm-8 col-xl-12">
+                    <a href="Profileview.html" class="nav-item nav-link ">
+                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                            <img src="./assets/img/1.jpeg" alt="Profile" id="profile">
+                                <div class="ms-3">
+                                    <div>
+                                        <h6 class="mb-3">Welcome, Robert</h6>
+                                        <h6 class="mb-0">Role:Training Co-Ordinator</h6>
+                                    </div>
+                                </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid px-2">
+            <div class="row g-3 my-2">
+                <div class="col-md-6">
+                    <a href="head-coordinator.html" class="nav-item nav-link active">
+                        <div class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div class="col-2">
+                                <i class="fa fa-book text-dark fs-3" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-2 ">
+                                <h4 class="mb-0 text-dark">Assigned Review</h4>
+                            </div>
+                            <div class="col-2">
+                                <h3 class="mb-0 mx-3">5</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6">
+                    <a href="head-coordinator.html" class="nav-item nav-link active">
+                        <div class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div class="col-2">
+                                <i class="fa fa-male text-dark mx-2 fs-3" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-2 ">
+                                <h4 class="mb-0 text-dark">Completed Review</h4>
+                            </div>
+                            <div class="col-2">
+                                <h3 class="mb-0 mx-3">{{reviewdata.completedReviewCount}}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row g-3 my-2">
+                <div class="col-md-6">
+                    <a href="head-coordinator.html" class="nav-item nav-link active">
+                        <div class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                            <div class="col-2">
+                                <i class="fa fa-users text-dark fs-3" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-xs-2 ">
+                                <h4 class="mb-0 text-dark">Canceled Review</h4>
+                            </div>
+                            <div class="col-2">
+                                <h3 class="mb-0 mx-4">{{reviewdata.cancelledReviewCount}}</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

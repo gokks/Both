@@ -1,0 +1,83 @@
+<div class="sidebar pe-4 pb-3" id="sidebar">
+    <nav class="navbar bg-light navbar-light">
+        <a href="index.html" class="navbar-brand mx-4 mb-3">
+            <h3 class="text-primary">TMS</h3>
+        </a>
+
+        <!-- Head Sidebar -->
+        <div class="navbar-nav w-100">
+            <div *ngIf="role=='Head'">
+                <a [routerLink]="['../Home']" class="nav-item nav-link"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+                <a [routerLink]="['../']" class="nav-item nav-link"><i class="fa fa-address-card"></i>My Profile</a>
+                <a [routerLink]="['../Dashboard']" class="nav-item nav-link"><i class="fa fa-desktop" aria-hidden="true"></i>Dashboard</a>
+                <a [routerLink]="['../Userlist']" class="nav-item nav-link"><i class="fa fa-user" aria-hidden="true"></i>Co-Ordinator</a>
+                <a [routerLink]="['../Departmentlist']" class="nav-item nav-link"><i class="fa fa-book" aria-hidden="true"></i>Department</a>
+                <a [routerLink]="['../Userlist']" class="nav-item nav-link"><i class="fa fa-male" aria-hidden="true"></i>Trainer</a>
+                <a [routerLink]="['../Userlist']" class="nav-item nav-link"><i class="fa fa-users" aria-hidden="true"></i>Trainee</a>
+                <a [routerLink]="['../Userlist']" class="nav-item nav-link"><i class="fa fa-user-md" aria-hidden="true"></i>Reviewer</a>
+            </div>
+        </div>
+
+        <!-- Co-Ordinator Sidebar -->
+        <div *ngIf="role=='Co-Ordinator'">
+            <div class="navbar-nav w-100">
+                <a [routerLink]="['../Home']" class="nav-item nav-link"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+                <a [routerLink]="['../']" class="nav-item nav-link"><i class="fa-solid fa-address-card"></i>My Profile</a>
+                <a [routerLink]="['../Dashboard']" class="nav-item nav-link"><i class="fa fa-desktop" aria-hidden="true"></i>Dashboard</a>
+                <a [routerLink]="['../Departmentlist']" class="nav-item nav-link"><i class="fa fa-book" aria-hidden="true"></i>Department</a>
+                <a [routerLink]="['../courselist']" class="nav-item nav-link"><i class="fa fa-address-book" aria-hidden="true"></i>Courses</a>
+                <a [routerLink]="['../']" class="nav-item nav-link"><i class="fa-solid fa-file-pen"></i>Assign Course</a>
+                <a [routerLink]="['../Userlist']" class="nav-item nav-link"><i class="fa fa-male" aria-hidden="true"></i>Trainer</a>
+                <a [routerLink]="['../Userlist']" class="nav-item nav-link"><i class="fa fa-users" aria-hidden="true"></i>Trainee</a>
+                <a [routerLink]="['../Userlist']" class="nav-item nav-link"><i class="fa fa-user-md" aria-hidden="true"></i>Reviewer</a>
+                <a [routerLink]="['../']" class="nav-item nav-link"><i class="fa-solid fa-square-pen"></i>Review</a>
+            </div>
+        </div>
+
+        <!-- Trainer Sidebar -->
+        <div *ngIf="role=='Trainer'">
+            <div class="navbar-nav w-100">
+                <a [routerLink]="['../Home']" class="nav-item nav-link"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+                <a [routerLink]="['../']" class="nav-item nav-link "><i class="fa-solid fa-address-card"></i>My Profile</a>
+                <a [routerLink]="['../courselist']" class="nav-item nav-link"><i class="fa fa-book" aria-hidden="true"></i>My Course</a>
+            </div>
+        </div>
+
+        <!-- Trainee Sidebar -->
+        <div *ngIf="role=='Trainee'">
+            <div class="navbar-nav w-100">
+                <a [routerLink]="['../Home']" class="nav-item nav-link"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+                <a [routerLink]="['../']" class="nav-item nav-link"><i class="fa-solid fa-address-card"></i>My Profile</a>
+                <a [routerLink]="['../Dashboard']" class="nav-item nav-link active"><i class="fa fa-desktop" aria-hidden="true"></i>Dashboard</a>
+                <a [routerLink]="['../courselist']" class="nav-item nav-link"><i class="fa fa-book" aria-hidden="true"></i>My Course</a>
+                <a [routerLink]="['../']" class="nav-item nav-link"><i class="fa-solid fa-square-pen"></i>Review</a>
+            </div>
+        </div>
+
+        <!-- Reviewer Sidebar -->
+        <div *ngIf="role=='Reviewer'">
+            <div class="navbar-nav w-100">
+                <a [routerLink]="['../Home']" class="nav-item nav-link"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+                <a [routerLink]="['../']" class="nav-item nav-link"><i class="fa-solid fa-address-card"></i>My Profile</a>
+                <a [routerLink]="['../Dashboard']" class="nav-item nav-link"><i class="fa fa-desktop" aria-hidden="true"></i>Dashboard</a>
+                <a [routerLink]="['../']" class="nav-item nav-link"><i class="fa-solid fa-square-pen"></i>Assigned Review</a>
+                <a [routerLink]="['../']" class="nav-item nav-link"><i class="fa-solid fa-clipboard-list"></i>Completed Review</a>
+                <a [routerLink]="['../']" class="nav-item nav-link"><i class="fa-solid fa-xmark"></i>Canceled Review</a>
+            </div>
+        </div>
+    </nav>
+</div>
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+    <a class="sidebar-toggler flex-shrink-0" (click)="toggle()">
+        <i class="fa fa-bars"></i>
+    </a>
+    <div class="navbar-nav align-items-center ms-auto">
+        <div class="nav-item">
+            <a href="#" class="d-none d-lg-inline-flex">
+                <a [routerLink]="['../']"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Log Out</a>
+            </a>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->

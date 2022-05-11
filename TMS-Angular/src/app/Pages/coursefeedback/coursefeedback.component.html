@@ -1,0 +1,71 @@
+<!-- <div *ngFor="let item of "></div>  -->
+<div class="content">
+    
+    <section>
+        <h3 class="pt-4 px-4">Course Feedback</h3>
+    </section>
+
+
+    <!--feedback form start-->
+    <form style="margin:30px;">
+
+        
+    <!-- <div *ngFor="let item of data">        -->
+        <div class="row">
+            <div class="col-4 p-2 ">
+                <h5>{{data.course.name}}</h5> 
+                    <!-- :{{item.courseId}}</h6> -->
+                    <br>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-2 ">
+                <h6> Trainer :</h6>
+            </div>
+            <div class="col-1">
+                <p>{{data.owner.name}}</p>
+                <!-- <p>{{item.ownerId}}</p> -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2 ">
+                <h6> Rating :</h6>
+                    <!-- {{item.rating}}</h6> -->
+            </div>
+            <div class="col-1">
+                <p>{{data.rating}}</p>
+                <!-- <p>{{item.ownerId}}</p> -->
+            </div>
+            <!--Feedback rating -->
+            <!-- <div class="col-2 ">
+
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+                <span class="fa fa-star "></span>
+            </div> -->
+
+        </div>
+
+        <br>
+
+
+        <!--FEEDBACK TEXTAREA-->
+        <div class="row">
+            <div class="col-2 ">
+                <h6> Feedback :</h6>
+            </div>
+            <div class="form-outline w-25 mb-4 ">
+                <p>{{data.feddback}}</p>
+                <!-- <p>{{item.rating}}</p> -->
+            </div>
+
+            <!--Submit button-->
+            <a href="Coursefeedback.html"><button type="button" class="btn btn-dark pe-4 px-4">EDIT</button></a>
+
+            <!--feedback form end-->
+<!-- </div>   -->
+           

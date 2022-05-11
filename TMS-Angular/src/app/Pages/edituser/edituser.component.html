@@ -1,0 +1,164 @@
+<div class="content">
+    <app-sidebar></app-sidebar>
+    <!--Reviewer-->
+    <div *ngIfElse="role=='Reviewer'" class="col-sm-6 p-4">
+        <h3 class="text-black pb-2">Edit Reviewer</h3>
+        <div class="form-floating mb-4">
+            <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
+            <label for="floatingText">Fullname</label>
+        </div>
+        <div class="form-floating mb-4">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mb-4 nav-item dropdown">
+            <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
+            <label for="floatingText">Username</label>
+        </div>
+        <div class="form-floating mb-4">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+        </div>
+        <hr>
+        <!-- <div class="form-group mt-3">
+                    <label class="mr-2">Upload your Image:</label>
+                    <input type="file" name="file">
+                </div> -->
+        <hr>
+        <a href="co-reviewer.html"><button type="submit" class="btn btn-dark pe-4 px-4">Save</button></a>
+    </div>
+
+    <!--Trainee-->
+    <div *ngIf="role=='Trainee'" class="col-sm-6 p-4">
+        <h3 class="text-black pb-2">Edit Trainee</h3>
+        <div class="form-floating mb-4">
+            <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
+            <label for="floatingText">Fullname</label>
+        </div>
+        <div class="form-floating mb-4">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating form-floating-sm mb-4 nav-item dropdown">
+            <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
+            <label for="floatingText">Username</label>
+        </div>
+        <div class="form-floating mb-4">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+        </div>
+        <div class="form-floating mb-4">
+            <select class="form-select" aria-label="Default select example">
+                <option selected> Department</option>
+                <option value="1">.Net</option>
+                <option value="2">Java</option>
+                <option value="3">BFS</option>
+                <option value="3">IAS</option>
+                <option value="3">EBA</option>
+
+            </select>
+        </div>
+        <!-- <hr>
+        <div class="form-group mt-3">
+            <label class="mr-2">Upload your Image:</label>
+            <input type="file" name="file">
+        </div>
+        <hr> -->
+        <a href="#"><button type="submit" class="btn btn-dark pe-4 px-4">Save</button></a>
+    </div>
+
+    <!-- Coordinator-->
+    <div *ngIfElse="role=='Coordinator'" class="col-sm-6 p-4">
+        <h3 class="text-black pb-2">Edit Co-Ordinator</h3>
+        <div class="form-floating mb-4">
+            <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
+            <label for="floatingText">Fullname</label>
+        </div>
+        <div class="form-floating mb-4">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mb-4 nav-item dropdown">
+            <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
+            <label for="floatingText">Username</label>
+        </div>
+        <div class="form-floating mb-4">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+        </div>
+        <hr>
+        <div class="form-group mt-3">
+            <label class="mr-2">Upload your Image:</label>
+            <input type="file" name="file">
+        </div>
+        <hr>
+        <a href="#"><button type="submit" class="btn btn-dark pe-4 px-4">Save</button></a>
+    </div>
+
+    <!--Trainer-->
+    <div *ngIfElse="role=='Trainer'" class="col-sm-6 p-4">
+        <h3 class="text-black pb-2">Edit Trainer</h3>
+        <div class="form-floating mb-4">
+            <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
+            <label for="floatingText">Fullname</label>
+        </div>
+        <div class="form-floating mb-4">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating form-floating-sm mb-4 nav-item dropdown">
+            <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
+            <label for="floatingText">Username</label>
+        </div>
+        <div class="form-floating mb-4">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+        </div>
+        <div class="form-floating mb-4">
+            <select class="form-select" aria-label="Default select example">
+                <option selected> Department</option>
+                <option value="1">.Net</option>
+                <option value="2">Java</option>
+                <option value="3">BFS</option>
+                <option value="3">IAS</option>
+                <option value="3">EBA</option>
+
+            </select>
+        </div>
+        <hr>
+        <div class="form-group mt-3">
+            <label class="mr-2">Upload your Image:</label>
+            <input type="file" name="file">
+        </div>
+        <hr>
+        <a href="#"><button type="submit" class="btn btn-dark pe-4 px-4">Save</button></a>
+    </div>
+
+    <!--Head-->
+        <div *ngIfElse="role=='Head'" class="col-sm-6 p-4">
+            <h3 class="text-black pb-2">Edit Head</h3>
+            <div class="form-floating mb-4">
+                <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
+                <label for="floatingText">Fullname</label>
+            </div>
+            <div class="form-floating mb-4">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating form-floating-sm mb-4 nav-item dropdown">
+                <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
+                <label for="floatingText">Username</label>
+            </div>
+            <div class="form-floating mb-4">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+            </div><hr>
+            <div class="form-group mt-3">
+                <label class="mr-2">Upload your Image:</label>
+                <input type="file" name="file">
+            </div>
+            <hr>
+            <a href="#"><button type="submit" class="btn btn-dark pe-4 px-4">Save</button></a>
+        </div>
+
+    </div>

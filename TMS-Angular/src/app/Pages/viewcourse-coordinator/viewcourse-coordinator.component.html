@@ -1,0 +1,159 @@
+<div class="content">
+    <app-sidebar>
+        
+    </app-sidebar>
+    <section><h2 class="pt-4 px-4">ADO.Net</h2> </section>
+
+        <div class="container-fluid px-4 pt-2 pb-2">
+	    <div class="row g-3 my-2">
+ 	       <div class="col-8">
+       		  <h5>Course Duration : 40 hours</h5>
+  	       </div>
+  	       <div class="right col-4">
+       		  <h5>Trainer : Rafi</h5>
+               </div>
+ 	    </div>
+ 	    <div class="row g-3 my-2">
+ 	       <div class="col-8">
+       		  <h5>Course Description :</h5>
+  	       </div>
+  	       <div *ngIf="role=='Trainer'||'Co-Ordinator'" class="col-4">
+       		  <a href="Trainer-TraineeList.html"><u class="text-dark"><h5>List of Trainee</h5></u></a>
+                </div>
+ 	    </div>
+	    <div class="row g-3 my-2">
+                <div class="col-10" style="align-items: center;">
+       		  <h5>Course Content</h5>
+		</div>		
+    <div class="container-fluid px-4 pt-2 pb-2">
+        <!-- <div class="header" id="style">                                                                                    SEARCH FORM
+            <input class="form-control" id="search" type="text" placeholder="Search" aria-label="Search">
+                <div class="container-fluid" >
+                    <div class="col-sm-12 col-xl-12 ">
+                        <div class=" rounded">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Sort by Department</option>
+                                <option value="1">.Net</option>
+                                <option value="2">Java</option>
+                                <option value="3">BFS</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        <div class="row g-3 my-2">
+            <div class="col-md-12">
+                <div class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                    <div class="col-1">
+                        <a href=""><p class="mb-0 text-dark">Connected Architecture</p></a>
+                    </div>
+                    <div *ngIf="role=='Trainee'">
+                        <p class="col-1"><p class="mb-0 text-dark">In progress :80%</p>
+                    </div>
+                        <a *ngIf="role=='Co-Ordinator'" href=""><i class="fa-solid fa-pen-to-square text-dark"></i></a>
+                        <a *ngIf="role=='Co-Ordinator'" href=""><i class="fa-solid fa-ban text-dark"></i></a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Navbar End -->
+
+    <div class="Bread pt-1 px-1">
+        <body>
+            <!-- Breadcrums Start -->
+            <div style="margin:20px;">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="headhome.html">Home</a></li>
+        <li class="breadcrumb-item">
+                            <a href="#">Course List</a></li>	
+                        <li class="breadcrumb-item active">ADO.Net </li>
+                    </ol>
+                </nav>
+            </div>
+        </body>
+    </div>
+
+<section><h2 class="pt-4 px-4">ADO.Net</h2> </section>
+
+<div class="container-fluid px-4 pt-2 pb-2">
+<div class="row g-3 my-2">
+    <div class="col-8">
+         <h5>Course Duration : 40 hours</h5>
+     </div>
+     <div class="right col-4">
+         <h5>Trainee Count : 50</h5>
+       </div>
+ </div>
+ <div class="row g-3 my-2">
+    <div class="col-8">
+         <h5>Course Description :</h5>
+     </div>
+     <div class="right col-4">
+         <a href="Trainer-TraineeList.html"><u class="text-dark"><h5>List of Trainee</h5></u></a>
+        </div>
+ </div>
+<div class="row g-3 my-2">
+        <div class="col-10" align="center">
+         <h5>Course Content</h5>
+</div>		
+</div>	
+    <div class="row g-3 my-2">
+        <div class="col-md-12">
+            <div class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                <div class="col-6">
+                    <a href=""><p class="mb-0 text-dark">Connect</p></a>
+                </div>
+                <div class="col-2">
+        <p>Completed</p>	
+                </div>
+    </div> 	
+        </div>
+    </div>
+<div class="row g-3 my-2">
+        <div class="col-md-12">
+            <div class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                <div class="col-6">
+                    <a href=""><p class="mb-0 text-dark">Query</p></a>
+                </div>
+                <div class="col-2">
+        <p>Completed</p>	
+                </div>
+    </div> 	
+        </div>
+    </div>
+<div class="row g-3 my-2">
+        <div class="col-md-12">
+            <div class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                <div class="col-6">
+                    <a href=""><p class="mb-0 text-dark">Sort</p></a>
+                </div>
+                <div class="col-2">
+        <p>Not Completed</p>	
+                </div>
+    </div> 	
+        </div>
+    </div>		
+<div class="container p-4 d-flex justify-content-around sticky-top px-4">
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <a class="page-link text-dark" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">Previous</span>
+        </a>
+      </li>
+      <li class="page-item"><a class="page-link text-dark" href="#">1</a></li>
+      <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
+      <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link text-dark" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">Next</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

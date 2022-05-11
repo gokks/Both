@@ -1,0 +1,104 @@
+
+<html>
+  <div class="content">
+    <app-sidebar></app-sidebar>
+    <!-- <app-sidebar></app-sidebar> -->
+    <div class="container-fluid px-4 pt-2 pb-2">
+        <section>
+            <h3 class="pt-4 px-4">ASP.NET</h3>
+        </section>
+
+        <div class="container-fluid px-4 pt-2 pb-2">
+            <div *ngIf="role=='Trainer'||'Co-Ordinator'">
+                <div class="row g-3 my-2">
+                    <div class="col-8" >
+                            <h5>Course Duration : {{data.duration}}</h5>
+                    </div>
+                </div>
+                <div class="row g-3 my-2">
+                    <div class="col-8">
+                        <h5>Course Description :{{data.description}} </h5>
+                    </div>
+                    <div class="col-4">
+                        <a href="Trainer-TraineeList.html"><u class="text-dark">
+                                <h5>List of Trainee</h5>
+                            </u></a>
+                    </div>
+                </div>
+                
+                <div class="row g-3 my-2">
+                    <div class="col-10" ,align="center">
+                        <h5>Course Content</h5>
+                    </div>
+                    <div class="container" *ngFor="let item of data">
+                        <div class="row g-3 my-2">
+                            <div class="col-md-12">
+                                <div
+                                    class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                                    <div class="col-1">
+                                        <a href="">
+                                            <p class="mb-0 text-dark">{{item.name}}</p>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <p class="col-1">
+                                        <p class="mb-0 text-dark">Duration : {{item.duration}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                               
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="role=='Trainee'">
+                <div class="row g-3 my-2">
+                    <div class="col-8" >
+                            <h5>Course Duration : {{data.duration}}</h5>
+                    </div>
+                    <div class="col-4">
+                        <h5>Trainer : Rafi</h5>
+                    </div>
+                </div>
+                <div class="row g-3 my-2">
+                    <div class="col-8">
+                        <h5>Course Description :{{data.description}} </h5>
+                    </div>
+                    <div class="col-4">
+                        <a href="Trainer-TraineeList.html"><u class="text-dark">
+                                <h5>List of Trainee</h5>
+                            </u></a>
+                    </div>
+                </div>
+                
+                <div class="row g-3 my-2">
+                    <div class="col-10" ,align="center">
+                        <h5>Course Content</h5>
+                    </div>
+                    <div class="container" *ngFor="let item of data">
+                        <div class="row g-3 my-2">
+                            <div class="col-md-12">
+                                <div
+                                    class="p-4 bg-light shadow-sm d-flex justify-content-around align-items-center rounded">
+                                    <div class="col-1">
+                                        <a href="">
+                                            <p class="mb-0 text-dark">{{item.name}}</p>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <p class="col-1">
+                                        <p class="mb-0 text-dark">Duration : {{item.duration}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                               
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+    <app-footer></app-footer>
+</div>  

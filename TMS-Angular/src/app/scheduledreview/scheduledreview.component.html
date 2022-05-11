@@ -1,0 +1,86 @@
+
+
+<div class="content">
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+        <a href="#" class="sidebar-toggler flex-shrink-0">
+            <i class="fa fa-bars"></i>
+        </a>
+        <div class="navbar-nav align-items-center ms-auto">
+            <div class="nav-item">
+                <a href="#" class="d-none d-lg-inline-flex">
+                    <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Log Out</a>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <div class="Bread pt-1 px-1">
+        <body>
+            <!-- Breadcrums Start -->
+            <div style="margin:20px;">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="headhome.html">Home</a></li>
+                        <li class="breadcrumb-item active">Co-Ordinator List </li>
+                    </ol>
+                </nav>
+            </div>
+        </body>
+    </div>
+
+    <!-- <h2 class="pt-4 px-4">Schedule Review</h2> -->
+    <div class="pt-4 px-4">
+        <h2 class="mb-5">Schedule Review </h2>
+        <select class="form-select form-select-lg mb-5" aria-label=".form-select-sm example">
+            <option *ngFor="let item of Department" [value]="item.id">
+            {{item.name}}
+        </option>
+    </select>
+
+            <!-- <option selected>Department</option>
+            <option value="1">.Net</option>
+            <option value="2">Java</option>
+            <option value="3">EBA</option>
+            <option value="3">BFS</option> -->
+
+
+        <select class="form-select form-select-lg mb-5" aria-label=".form-select-sm example">
+            <option selected>Reviewer</option>
+            <option value="1">Jack</option>
+            <option value="2">Jonny</option>
+            <option value="3">George</option>
+            <option value="3">maria</option>
+        </select>
+
+        <select class="form-select form-select-lg mb-5" aria-label=".form-select-sm example">
+            <option selected>Trainee</option>
+            <option value="1">Thomas</option>
+            <option value="2">Sarah</option>
+            <option value="3">Daniel</option>
+            <option value="3">Lisa</option>
+        </select>
+
+        <!--calender-->
+        <div class="input-group-lg rounded my-4 mb-5 fs-1">
+            <input type="date" class="form-control rounded" placeholder="Date" aria-label="date"
+                aria-describedby="search-addon" />
+        </div>
+        <!--Calender end-->
+
+        <!--Time-->
+        <div class="input-group-lg rounded my-2 mb-5">
+            <input type="time" class="form-control rounded" placeholder="Time" aria-label="Search"
+                aria-describedby="search-addon" />
+        </div>
+        <!--Time-->
+        <a href="head-coordinator.html"><button type="button" class="btn btn-dark pe-4 px-4 mb-5">Schedule</button></a>
+    </div>
+    <!-- </div> -->
+
+    
+
+    
+
+</div>

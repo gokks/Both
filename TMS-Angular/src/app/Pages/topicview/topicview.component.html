@@ -1,0 +1,27 @@
+<div class="content">
+
+    <app-sidebar></app-sidebar>
+    <section>
+        <h2 class="pt-4 px-4">{{data.name}}</h2>
+    </section>
+
+    <div class="container-fluid px-4">
+        <div class="row g-3 my-2">
+            <div class="col-2">
+                <h5>Duration :</h5>
+            </div>
+            <div class="col-md-2">
+               <p>{{data.duration}} </p>
+            </div>
+        </div>
+
+        <div class="row g-3 my-2">
+            <div class="col-2">
+                <h5 class="pt-4">Topic Content :</h5>
+            </div>
+            <div class="col-md-10 pt-4">
+                <p>{{data.context}}</p>
+            </div>
+        </div>
+    </div>
+</div>
